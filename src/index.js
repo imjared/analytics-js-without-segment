@@ -1,8 +1,7 @@
-const Terser = require('terser')
-const template = require('lodash/template')
+const template = require('lodash/template');
 
-import { log } from './tools.js'
-import { getSnippet } from './snippet.js'
+import { log } from './tools.js';
+import { getSnippet } from './snippet.js';
 
 /**
  * Render analytics as string.
@@ -35,16 +34,13 @@ export const renderAnalytics = (options) => {
   }
   // PRODUCTION
   log('production mode! SENDING data to analytics-tools')
-  const snippet = getSnippet()
-  const theTemplate = template(snippet)
-  const sourceWithValues = theTemplate({
+  const snippet = getSnippet();
+  const theTemplate = template(snippet);
+
+  return theTemplate({
     cdnUrl: cdnUrl || 'https://cdnjs.cloudflare.com/ajax/libs/analytics.js/2.9.1/analytics.min.js',  // default
     services: JSON.stringify(services),
-  })
-  const result = Terser.minify(sourceWithValues)  // see https://www.npmjs.com/package/terser
-  if (result.error) throw new Error(result.error)
-  log(result.code)
-  return result.code
+  });
 }
 
 /**

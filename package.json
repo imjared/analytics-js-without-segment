@@ -1,6 +1,6 @@
 {
   "name": "analytics-js-without-segment",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A plugin use (and render) Segments open-source analytics library (analytics.js) WITHOUT using the paid Segment service (segment.com). To be used with your favorite analytics-tools like Google Analytics, Mixpanel, Hotjar, etc.",
   "keywords": [
     "standalone",
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/thebarty/analytics-js-without-segment"
   },
-  "author": "Henning <me@me.com>",
+  "author": "Patronage <jared@patronage.org>",
   "scripts": {
     "lint": "standard",
     "build": "babel src --out-dir .",
@@ -28,8 +28,7 @@
     "publish-to-npm": "npm run build; npm publish .;"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
-    "terser": "^3.10.2"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -39,11 +38,10 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "ignore": [
-    ]
+    "ignore": []
   },
   "bugs": {
-    "url": "https://github.com/thebarty/analytics-js-without-segment/issues"
+    "url": "https://github.com/imjared/analytics-js-without-segment/issues"
   },
-  "homepage": "https://github.com/thebarty/analytics-js-without-segment#readme"
+  "homepage": "https://github.com/imjared/analytics-js-without-segment#readme"
 }
