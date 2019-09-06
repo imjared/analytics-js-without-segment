@@ -14,7 +14,7 @@
     "without",
     "segment"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   "author": "Patronage <jared@patronage.org>",
   "scripts": {
     "lint": "standard",
-    "build": "babel src --out-dir .",
-    "build-watch": "npx babel src --out-dir . --watch",
+    "build": "babel src --out-dir dist",
+    "build-watch": "npx babel src --out-dir dist --watch",
     "publish-to-npm": "npm run build; npm publish .;"
   },
   "dependencies": {
